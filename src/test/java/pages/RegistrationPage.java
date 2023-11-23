@@ -16,6 +16,7 @@ public class RegistrationPage {
         open("/automation-practice-form");
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#close-fixedban').remove()");
+        executeJavaScript("$('#adplus-anchor').remove()");
 
         return this;
     }
