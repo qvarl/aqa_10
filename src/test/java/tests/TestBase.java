@@ -17,10 +17,10 @@ public class TestBase {
     static void setEnvironment() {
         baseUrl = "https://demoqa.com";
         pageLoadTimeout = 90000;
-        browser = "chrome";
-        browserVersion = "100.0";
-        browserSize = "1920x1080";
-        remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        browser = System.getProperty("browser","chrome");
+        browserVersion = System.getProperty("browserVersion","100.0");
+        browserSize = System.getProperty("browserSize","1920x1080");
+        remote = System.getProperty("remote","https://user1:1234@selenoid.autotests.cloud/wd/hub");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
